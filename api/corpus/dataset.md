@@ -11,3 +11,9 @@ Quality is a sensory score given by tasters. It is not computed from residual su
 ## What this assistant is for
 
 Ask it what a column means, how two columns differ, or what the notes say about an example wine. Answers have to come from these notes. A measurement that is not written here is not a fact the assistant may invent.
+
+## Source
+
+These notes describe the Wine Quality dataset donated by P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Wine Quality [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T. Licensed under CC BY 4.0. This course is not affiliated with the donors.
+
+The donors ask for this citation when the tables are used: P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. Decision Support Systems, 47(4):547–553, 2009.
