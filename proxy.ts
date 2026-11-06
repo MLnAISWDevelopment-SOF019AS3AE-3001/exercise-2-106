@@ -4,6 +4,7 @@ import {
   coursePassword,
   safeEqual,
 } from "@/lib/course-access";
+import { redirectTo } from "@/lib/redirect";
 import { NextRequest, NextResponse } from "next/server";
 
 const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:8000";
@@ -26,10 +27,8 @@ function isPublic(pathname: string): boolean {
 }
 
 function loginRedirect(request: NextRequest, error?: string): NextResponse {
-  const url = request.nextUrl.clone();
-  url.pathname = "/login";
-  url.search = error ? `error=${error}` : "";
-  return NextResponse.redirect(url);
+  const path = error ? `/login?error=${error}` : "/login";
+  return redirectTo(request, path);
 }
 
 export default async function proxy(request: NextRequest) {

@@ -1,8 +1,8 @@
 import { accessCookieName } from "@/lib/course-access";
-import { NextResponse } from "next/server";
+import { redirectTo } from "@/lib/redirect";
 
 export async function POST(request: Request) {
-  const response = NextResponse.redirect(new URL("/login", request.url), 303);
+  const response = redirectTo(request, "/login");
   response.cookies.set(accessCookieName(), "", {
     httpOnly: true,
     sameSite: "lax",

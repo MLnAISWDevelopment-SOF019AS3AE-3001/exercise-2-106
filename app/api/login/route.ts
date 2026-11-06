@@ -4,24 +4,21 @@ import {
   coursePassword,
   safeEqual,
 } from "@/lib/course-access";
-import { NextResponse } from "next/server";
+import { redirectTo } from "@/lib/redirect";
 
 export async function POST(request: Request) {
   const password = coursePassword();
-  const loginUrl = new URL("/login", request.url);
   if (!password) {
-    loginUrl.searchParams.set("error", "unconfigured");
-    return NextResponse.redirect(loginUrl, 303);
+    return redirectTo(request, "/login?error=unconfigured");
   }
 
   const form = await request.formData();
   const given = String(form.get("password") ?? "");
   if (!safeEqual(given, password)) {
-    loginUrl.searchParams.set("error", "1");
-    return NextResponse.redirect(loginUrl, 303);
+    return redirectTo(request, "/login?error=1");
   }
 
-  const response = NextResponse.redirect(new URL("/rag", request.url), 303);
+  const response = redirectTo(request, "/rag");
   response.cookies.set(accessCookieName(), await accessToken(password), {
     httpOnly: true,
     sameSite: "lax",
