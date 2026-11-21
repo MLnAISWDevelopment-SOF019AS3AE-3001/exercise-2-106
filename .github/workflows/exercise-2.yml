@@ -2,7 +2,7 @@ name: Exercise 2
 
 on:
   push:
-    branches: [main]
+    branches: [exercise-2-106]
 
 jobs:
   check:
