@@ -1,7 +1,9 @@
 # Comparison
 
-The baseline answer and modified answer provide the same main information. Both explain that residual sugar measures the sugar remaining after fermentation and that it is different from the wine quality score.
+The baseline answer and modified answer provide the same main information: residual sugar measures the sugar remaining after fermentation, and it is not the same as the wine quality score.
 
-The modified answer uses slightly different wording. For example, it says "Quality is a sensory score" instead of "The quality score is a sensory score." Both answers include citations to the measurements and dataset notes.
+However, the baseline answer provides more explanation. It describes the quality score as a sensory score given by tasters and explains that it is not calculated from laboratory measurements. The modified answer is shorter and does not include this additional explanation.
 
-The modified answer also displays a list of retrieved sources, including measurements, examples, and dataset pages. Overall, the prompt modification did not significantly change the factual content of the answer.
+Both answers include citations to the wine notes. The modified answer also displays a list of retrieved sources, including measurements, examples, and dataset pages.
+
+Overall, the prompt modification changed the answer format and presentation, but the modified answer provides less detail than the baseline answer. It follows the requested citation format and begins with "Wine notes:".
